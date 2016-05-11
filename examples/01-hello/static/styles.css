@@ -1,0 +1,17 @@
+body{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 3.0em;
+  border: thin solid purple;
+  font-size: 20px;
+  font-family: 'Comic Sans MS', 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+input{
+  border: 2px solid green;
+}
+
+h2{
+  color: hotpink;
+}

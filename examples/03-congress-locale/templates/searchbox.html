@@ -1,0 +1,19 @@
+  <form action="{{url_for('results')}}" method="get">
+
+        <strong>Sort by:</strong>
+        <input type="radio" name="sortby" value="alpha" checked>Alphabetical
+        <input type="radio" name="sortby" value="oldest">Oldest
+        <input type="radio" name="sortby" value="youngest"> Youngest
+
+        <br>
+        <p>Search by zip code</p>
+        <input type="text" name="zipcode" value="">
+
+        <br>
+        <p>Or by state abbreviation</p>
+        <input type="text" name="state" value="">
+
+
+        <br>
+        <input class="submit-button" type="submit" value="Submit">
+  </form>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search results</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+
+  <div>Search again:   {% include 'searchbox.html' %}</div>
+
+
+  <p>Your search for <strong>"{{ lastname }}"</strong>
+  found <strong>{{ legislators | length }} </strong>
+  matches.</p>
+
+  <p>Results sorted by <strong>{{sortby}}</strong></p>
+
+  <table>
+    <tbody>
+      {% for p in legislators %}
+        <tr>
+          <td><img class="mugshot" src="https://theunitedstates.io/images/congress/225x275/{{p.bioguide_id}}.jpg" alt="{{p.bioguide}}"></td>
+          <td>{{p.title}}</td>
+          <td>{{p.fullname}}</td>
+          <td>{{p.state}} - {{p.district}}</td>
+
+          <td>{{p.birthdate}}</td>
+          <td>
+              {% if p.twitter_id %}
+                @
+                  <a href="https://twitter.com/{{p.twitter_id}}">{{ p.twitter_id }}</a>
+              {% endif %}
+          </td>
+          <td>
+              {% if p.facebook_id %}
+                FB:
+                  <a href="https://www.facebook.com/{{p.facebook_id}}">{{ p.facebook_id }}</a>
+
+              {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+</body>
+</html>

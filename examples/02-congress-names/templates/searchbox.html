@@ -1,0 +1,12 @@
+  <form action="{{url_for('results')}}" method="get">
+
+        <strong>Sort by:</strong>
+        <input type="radio" name="sortby" value="alpha" checked>Alphabetical
+        <input type="radio" name="sortby" value="oldest">Oldest
+        <input type="radio" name="sortby" value="youngest"> Youngest
+
+        <br>
+        <strong>Last name:</strong> <input type="text" name="lastname" value="">
+
+        <input type="submit" value="Submit">
+  </form>

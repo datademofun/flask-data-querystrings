@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search for a Congressmember</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
+</head>
+<body>
+
+  <h3>Type in the last name (partial is OK) of a Congressmember</h3>
+  {% include 'searchbox.html' %}
+
+  <p>Data comes from <a href="https://sunlightlabs.github.io/congress/index.html#legislator-spreadsheet">Sunlight Foundation</a></p>
+</body>
+</html>
