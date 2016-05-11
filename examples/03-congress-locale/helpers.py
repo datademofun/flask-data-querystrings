@@ -61,9 +61,11 @@ def filter_by_zipcode(zipcode, datarows, ziplookups):
 
 def sort_by_criteria(criteria, datarows):
     if criteria == 'oldest':
-        rows = sorted(datarows, key=itemgetter('birthdate'), reverse=True)
-    elif criteria == 'youngest':
         rows = sorted(datarows, key=itemgetter('birthdate'))
+    elif criteria == 'youngest':
+        # we have to 'reverse' the sort because younger ages correspond to
+        # "bigger" (i.e. later) birthdates
+        rows = sorted(datarows, key=itemgetter('birthdate'), reverse=True)
     else:
         # i.e. 'alpha' or any value...just sort by last name, first name
         rows = sorted(datarows, key=itemgetter('lastname'))
