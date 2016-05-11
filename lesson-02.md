@@ -3,6 +3,18 @@
 Source code: [examples/02-congress-names](examples/02-congress-names)
 
 
+The front page:
+
+![image 02-front.png](readme_assets/images/02-front.png)
+
+The results view:
+
+![image 02-results.png](readme_assets/images/02-results.png)
+
+
+
+
+
 This is slightly more complicated than the [Hello world, lesson](examples/01-hello), but not many more new concepts.
 
 The end result of this app is to let a user search for congressmembers by last name (partial strings are OK). So, this app reads an external dataset -- the [good ol' Congressmembers spreadsheet](examples/02-congress-names/static/data/legislators.csv) and parses it, which requires more code than a simple Hello, World.
